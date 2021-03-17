@@ -131,42 +131,70 @@
 // car.make = "bmw"
 // car.drive = funt
 
-const Mark = {
-    fName: "Mark Miller",
-    height: 1.74,
-    weight: 74,
-    calBmi: function(height, weight) {
-        this.height = height
-        this.weight = weight
-        let bmi = this.weight / this.height ** 2
-        return bmi
-    }
-}
+// const Mark = {
+//     fName: "Mark Miller",
+//     height: 1.74,
+//     weight: 74,
+// }
 
-const John = {
-    fName: "John Smith",
-    height: 1.8,
-    weight: 84,
-    calBmi: function() {
-        let bmi = this.weight / this.height ** 2
-        return bmi
-    }
-}
+// const John = {
+//     fName: "John Smith",
+//     height: 1.8,
+//     weight: 84,
+
+// }
 
 
-const markBmi = Mark.calBmi(1.5, 60)
-const johnBmi = John.calBmi()
 
-if(markBmi > johnBmi){
-    console.log(`${Mark.fName} BMI ${markBmi} is greater than John's BMI ${johnBmi}`)
-}
-else if ( johnBmi > markBmi){
-    console.log(`${John.fName} BMI ${johnBmi} is greater than Marks's BMI ${markBmi}`)
-}
-else {
-    console.log(`Mark's and John's BMI is same`)
+
+
+// const bmi = {
+//         calcBmi: function() {
+//         let bmi = this.weight / this.height ** 2
+//         return bmi
+//     }
+// }
+
+// const markBmi = bmi.calcBmi.call(Mark)
+// const johnBmi = bmi.calcBmi.call(John)
+
+
+// console.log(markBmi + " " + johnBmi)
+
+
+
+// const markBmi = Mark.calBmi(1.5, 60)
+// const johnBmi = John.calBmi()
+
+// if(markBmi > johnBmi){
+//     console.log(`${Mark.fName} BMI ${markBmi} is greater than John's BMI ${johnBmi}`)
+// }
+// else if ( johnBmi > markBmi){
+//     console.log(`${John.fName} BMI ${johnBmi} is greater than Marks's BMI ${markBmi}`)
+// }
+// else {
+//     console.log(`Mark's and John's BMI is same`)
+// }
+
+// Function constructor
+
+function Person( fullname, height, weight ) {
+
+    this.fullname = fullname
+    this.height = height
+    this.weight = weight
+
+    this.calBmi = this.weight / this.height ** 2
+
 }
 
+const john = new Person("John Smith", 172, 74)
+
+const mark = new Person("Mark", 165, 80 )
+
+console.log(`${john.fullname} bmi = ${john.calBmi}`)
+
+console.log(`${mark.fullname} bmi = ${mark.calBmi}`)
 
 
 

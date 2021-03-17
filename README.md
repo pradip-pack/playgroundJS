@@ -14,3 +14,11 @@ Export/Import
 
 Test data / varaible data
 
+Advance topics
+callback
+promises
+async/await
+functional programing
+rest/spread
+map/reduce
+
